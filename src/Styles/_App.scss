@@ -7,12 +7,12 @@ html {
   width: 95.2%;
   display: grid;
   z-index: 0;
-  grid-template-rows: 15% 50% 20% 10%;
+  grid-template-rows: 15% 50% 20%;
+  grid-template-columns: 50% 50%;
   grid-template-areas: 
-    "Header"
-    "DisplayField"
-    "PlayerCommands"
-    "Prompts";
+    "Header Header"
+    "PlayerCommands DisplayField"
+    "Prompts Prompts";
 
     header {
       grid-area: Header;
@@ -82,12 +82,13 @@ html {
       border: orange 5px solid;
       background-color: lightgray;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: space-around;
       position: relative;
       height: 100%;
       padding: 30px;
       width: 100%;
+      overflow: scroll;
     }
     .Prompts {
       grid-area: Prompts;
@@ -96,7 +97,7 @@ html {
       display: flex;
       justify-content: center;
       align-items: center;
-      position: relative;
+      // position: relative;
       height: 100%;
       padding: 30px;
       width: 100%;
