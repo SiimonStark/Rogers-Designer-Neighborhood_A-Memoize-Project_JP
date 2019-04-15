@@ -16,6 +16,7 @@ html {
 
     header {
       grid-area: Header;
+      box-sizing: border-box;
       position: relative;
       // background-color: skyblue;
       border: skyblue 5px solid;
@@ -35,7 +36,7 @@ html {
           background: url('../Resources/skyBanner.jpg');
           background-size: 100% 100%;
           background-position: center;
-          height: 70%;
+          height: 100%;
           opacity: 0.8;
           top: 0;
           left: 0;
@@ -50,6 +51,7 @@ html {
     }
     .DisplayField {
       grid-area: DisplayField;
+      box-sizing: border-box;
       border: greenyellow 5px solid;
       background-color: green;
       position: relative;
@@ -57,11 +59,17 @@ html {
       // background-position: center;
       // background-size: contain;
       height: 100%;
-      padding: 30px;
+      padding: 15px;
       width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
         .grass {
           width: 100%;
           height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
         }
         .grass::after {
           content: "";
@@ -79,6 +87,7 @@ html {
     }
     .PlayerCommands {
       grid-area: PlayerCommands;
+      box-sizing: border-box;
       border: orange 5px solid;
       background-color: lightgray;
       display: flex;
@@ -92,6 +101,7 @@ html {
     }
     .Prompts {
       grid-area: Prompts;
+      box-sizing: border-box;
       background-color: skyblue;
       border: purple 5px solid;
       display: flex;
