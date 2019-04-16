@@ -1,6 +1,30 @@
 .BurgerMenu {
+  position: absolute;
+  line-height: 35px;
+  border-radius: 10px;
   background: white;
-  width: 20%;
-  height: 20%;
-  
+  width: 140px;
+  height: 200px;
+
+    ul {
+      list-style: none;
+      width: 140px;
+      padding: 0;
+      display: flex;
+      // justify-content: center;
+      align-content: center;
+      flex-direction: column;
+    }
+    li {
+      font-family: Radley;
+      width: 140px;
+      text-align: center;
+
+      &:hover {
+        width: 100%;
+        background-color: red;
+        color: white;
+        text-shadow: black 1px 1px 1px;
+      }
+    }
 }

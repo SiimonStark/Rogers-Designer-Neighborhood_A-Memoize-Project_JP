@@ -36,8 +36,9 @@ class FlexInput extends Component {
       <form className="FlexInput">
         <h4>Flex-Input:</h4>
         {this.state.inputMapList.map((inputField, ind) => { return (
-          <div className={'inputGroup' + ind}>
+          <div className={'flexInput inputGroup' + ind}>
             <input id={'flexField' + ind} onChange={this.handleFlexChange}  className="flexRule" type="text" placeholder="Rule" />
+            <span className="colon">:</span>
             <input id={'flexField' + ind} onChange={this.handleFlexChange}  className="flexValue" type="text" placeholder="Value" />
           </div>
         )})}

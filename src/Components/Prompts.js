@@ -33,15 +33,22 @@ class Prompts extends Component {
             display: "grid",
             gridTemplateAreas: `"square-1 square-2" "square-3 square-4"`
           }
+        },
+        z: {
+          question: "No more Prompts!!"
         }
       },
       currentPrompt: 0
     };
   }
   checkPrompt = () => {
-    let currentCounter = this.state.currentPrompt += 1;
-    console.log(currentCounter);
-    this.setState({currentPrompt: currentCounter})
+    if (this.state.currentPrompt < 3) {
+      let currentCounter = this.state.currentPrompt += 1;
+      console.log(currentCounter);
+      this.setState({currentPrompt: currentCounter})
+    } else {
+      this.setState({currentPrompt: 'z'})
+    }
   }
   render() {
     return (
