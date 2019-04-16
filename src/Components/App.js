@@ -6,6 +6,7 @@ import PlayerCommands from './PlayerCommands';
 import Prompts from './Prompts';
 
 class App extends Component {
+
   render() {
     return (
       <div className="App">

@@ -37,8 +37,9 @@ class GridInput extends Component {
       <form className="GridInput">
         <h4>Grid-Input:</h4>
         {this.state.inputMapList.map((inputField, ind) => { return (
-          <div className={'inputGroup' + ind}>
+          <div className={'gridInput inputGroup' + ind}>
             <input id={'gridField' + ind} onChange={this.handleGridChange}  className="gridRule" type="text" placeholder="Rule" />
+            <span className="colon">:</span>
             <input id={'gridField' + ind} onChange={this.handleGridChange}  className="gridValue" type="text" placeholder="Value" />
           </div>
         )})}
