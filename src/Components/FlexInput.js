@@ -18,6 +18,7 @@ class FlexInput extends Component {
       ? flexRule = value
       : flexValue = value
 
+    this.props.updateInputs(id, { flexRule, flexValue });
     this.setState({[id]: {flexRule, flexValue}});
   }
   addInputField = () => {
@@ -31,7 +32,7 @@ class FlexInput extends Component {
     this.setState({inputCounter: counter, inputMapList: list, [fields]: newInput});
   }
   render() {
-    console.log('FlexState: ', this.state)
+    // console.log('FlexState: ', this.state)
     return (
       <form className="FlexInput">
         <h4>Flex-Input:</h4>
