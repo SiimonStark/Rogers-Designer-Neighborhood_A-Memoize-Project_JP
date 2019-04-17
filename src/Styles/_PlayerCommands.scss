@@ -45,4 +45,11 @@
       text-shadow: 1px 1px 1px skyblue;
       letter-spacing: .25em;
       margin: 10px;
+
+      &:hover {
+        background-color: red;
+        border: 2px white ridge;
+        color: white;
+        cursor: pointer;
+      }
 }

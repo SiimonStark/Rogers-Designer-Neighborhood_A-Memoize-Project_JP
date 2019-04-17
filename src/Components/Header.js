@@ -13,9 +13,15 @@ class Header extends Component {
       ? this.setState({showBurgerMenu: false})
       : this.setState({showBurgerMenu: true});
   }
+  handleMouseLeave = () => {
+    this.setState({showBurgerMenu: false});
+  }
   render() {
     let menu;
-    this.state.showBurgerMenu ? menu = <BurgerMenu/> : menu = null;
+    this.state.showBurgerMenu 
+      ? menu = <BurgerMenu mouseLeave={this.handleMouseLeave} /> 
+      : menu = null;
+      
     return (
       <header>
       <div className="sky"></div>

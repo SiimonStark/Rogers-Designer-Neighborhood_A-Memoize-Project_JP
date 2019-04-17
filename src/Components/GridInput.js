@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 class GridInput extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       gridField0: {gridRule: '', gridValue: ''},
       inputCounter: 0,
@@ -18,6 +18,7 @@ class GridInput extends Component {
       ? gridRule = value
       : gridValue = value
 
+    this.props.updateInputs(id, { gridRule, gridValue } );
     this.setState({[id]: {gridRule, gridValue}});
   }
   addInputField = () => {
@@ -31,7 +32,7 @@ class GridInput extends Component {
     this.setState({inputCounter: counter, inputMapList: list, [fields]: newInput});
   }
   render() {
-    console.log('GridState: ',this.state)
+    // console.log('GridState: ',this.state)
 
     return (
       <form className="GridInput">
