@@ -5,38 +5,33 @@ header {
   }
 
   button {
-    width: 80px;
-    height: 30px;
+    @include sizing(30px, 80px);
     border-radius: 10px;
     background-color: skyblue;
-    border: 2px white ridge;
-    color: white;
-    text-shadow: .5px .5px 1px black;
+    border: $lightButtonBorder;
+    color: $lightFontColor;
+    text-shadow: $darkButtonTextShadow;
     letter-spacing: .25em;
 
-  &:hover {
-    background-color: red;
-    cursor: pointer;
-    color: white;
-    box-shadow: 2px 2px 5px white;
-  }
+    &:hover {
+      background-color: $backgroundNAccent;
+      cursor: pointer;
+      color: $lightFontColor;
+      box-shadow: $darkShadow;
+    }
   }
 }
 .logo {
-  height: 100px;
-  width: 250px;
-  z-index: 3;
-  position: absolute;
-    left: 40%;
+  @include absPosition(null,null,null,40%,3);
+  @include sizing(100px, 250px);
+
   &::after {
+    @include absPosition(null,0,null,0,null);
     content: "";
     background: url('../Resources/MrRogers-logo.png');
     background-size: 100% 100%;
     background-position: center;
     height: 70%;
     opacity: 0.8;
-    left: 0;
-    right: 0;
-    position: absolute;
   }
 }

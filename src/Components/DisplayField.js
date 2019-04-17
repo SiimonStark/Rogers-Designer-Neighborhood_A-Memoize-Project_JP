@@ -11,22 +11,13 @@ class DisplayField extends Component {
         "fieldSquare square-2",
         "fieldSquare square-3",
         "fieldSquare square-4"
-      ],
-      items: {
-        road: "../Resources/town/road.png",
-        trees: [
-          "../Resources/town/tree-2.png",
-          "../Resources/town/tree-3.png",
-          "../Resources/town/tree-4.png"
-        ],
-        house: "../Resources/town/house-1.png"
-      }
+      ]
     };
   }
 
   render() {
-    const fieldStyle = { display: 'grid', border: '1px solid red', gridTemplateAreas: `"square-1 square-2" "square-3 square-4"` };
-    const boxStyle = { border: '2px solid yellow' }
+    const fieldStyle = { display: 'grid', gridTemplateAreas: `"square-1 square-2" "square-3 square-4"` };
+    
     return (
       <main className="DisplayField">
         <div className="grass" />
@@ -39,7 +30,7 @@ class DisplayField extends Component {
         {this.state.gridContainer ? (
           <section className="field-container" style={fieldStyle}>
             {this.state.gridSquares.map((square, ind) => (
-              <div className={square} style={boxStyle}>
+              <div className={square}>
                 <p>{'S: ' + [ind + 1]}</p>
                 <div className="road--container">
                   <div className="road positionRoad" />

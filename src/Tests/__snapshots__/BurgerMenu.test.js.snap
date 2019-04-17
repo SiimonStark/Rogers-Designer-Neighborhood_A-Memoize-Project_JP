@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BurgerMenu should match screenshot 1`] = `
+<aside
+  className="BurgerMenu"
+  onMouseLeave={[MockFunction]}
+>
+  <ul>
+    <li
+      onClick={[Function]}
+    >
+      Reset Game
+    </li>
+    <li
+      onClick={[Function]}
+    >
+      Skip Prompt
+    </li>
+    <li
+      onClick={[Function]}
+    >
+      Save Game
+    </li>
+    <li>
+      <a
+        className="docsGrid"
+        href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid"
+        target="blank"
+      >
+        Docs: Grid
+      </a>
+    </li>
+    <li>
+      <a
+        className="docsFlex"
+        href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex"
+        target="blank"
+      >
+        Docs: Flex
+      </a>
+    </li>
+  </ul>
+</aside>
+`;

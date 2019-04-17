@@ -1,41 +1,37 @@
 .BurgerMenu {
-  position: absolute;
-  line-height: 35px;
+  @include sizing(200px, 140px);
+  background: $lightBG;
   border-radius: 10px;
-  background: white;
-  width: 140px;
-  height: 200px;
-  box-shadow: 1px 2px 4px 0px black;
+  box-shadow: $darkShadow;
+  line-height: 35px;
+  position: absolute;
 
     ul {
+      @include displayFlex(null, null, center, column);
       list-style: none;
-      width: 140px;
       padding: 0;
-      display: flex;
-      // justify-content: center;
-      align-content: center;
-      flex-direction: column;
+      width: 140px;
     }
     li {
       font-family: Radley;
-      width: 140px;
       text-align: center;
+      width: 140px;
 
       a {
-        width: 100%;
-        text-decoration: none;
         color: black;
+        text-decoration: none;
+        width: 100%;
 
         &:hover {
-          color: white;
+          color: $lightFontColor;
         }
       }
 
       &:hover {
+        background-color: $backgroundNAccent;
+        color: $lightFontColor;
+        text-shadow: $darkTextShadow;
         width: 100%;
-        background-color: red;
-        color: white;
-        text-shadow: black 1px 1px 1px;
       }
     }
 }

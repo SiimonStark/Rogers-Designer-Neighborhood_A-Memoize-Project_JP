@@ -1,13 +1,13 @@
 .Prompts {
+  color: $lightFontColor;
   flex-direction: column;
-  color: white;
-  text-shadow: 1px 1px 1px black;
+  text-shadow: $darkTextShadow;
 
     article {
-      position: relative;
-      top: -20%;
-      text-align: center;
       height: 100%;
+      position: relative;
+      text-align: center;
+      top: -20%;
 
         h3 {
           font-size: 26px;
@@ -21,20 +21,19 @@
     }
 
     button {
-      position: relative;
-      width: 80px;
-      height: 30px;
+      @include sizing(30px, 80px);
+      background-color: $lightBG;
       border-radius: 10px;
-      background-color: white;
-      border: 2px red ridge;
-      color: red;
-      text-shadow: 1px 1px 1px skyblue;
+      border: 2px $buttonAccent ridge;
+      color: $buttonAccent;
       letter-spacing: .25em;
+      position: relative;
+      text-shadow: $lightButtonTxtShadow;
       
         &:hover {
-        background-color: red;
-        border: 2px white ridge;
-        color: white;
+        background-color: $backgroundNAccent;
+        border: $lightButtonBorder;
+        color: $lightFontColor;
         cursor: pointer;
       }
     }
