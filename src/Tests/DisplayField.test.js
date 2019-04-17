@@ -9,16 +9,7 @@ let mockState = {
     "fieldSquare square-2",
     "fieldSquare square-3",
     "fieldSquare square-4"
-  ],
-  items: {
-    road: "../Resources/town/road.png",
-    trees: [
-      "../Resources/town/tree-2.png",
-      "../Resources/town/tree-3.png",
-      "../Resources/town/tree-4.png"
-    ],
-    house: "../Resources/town/house-1.png"
-  }
+  ]
 };
 
 describe('DisplayField', () => {

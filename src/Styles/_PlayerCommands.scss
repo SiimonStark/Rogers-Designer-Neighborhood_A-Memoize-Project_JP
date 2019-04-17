@@ -1,13 +1,13 @@
 .PlayerCommands {
     h4 {
-        color: white;
-        text-shadow: black 1px 1px 1px;
+        color: $lightFontColor;
         font-size: 22px;
         margin: 0;
+        text-shadow: $darkTextShadow;
       }
 }
 
-.gridInput {
+.gridInput, .flexInput {
 
     input {
       border-radius: 30px;
@@ -15,41 +15,27 @@
       padding-left: 5%;
     }
     span {
-      color: white;
+      color: $lightFontColor;
       font-size: 25px;
-      text-shadow: black 1px 1px 1px;
-    }
-}
-.flexInput {
-
-    input {
-        border-radius: 30px;
-        margin: 10px;
-        padding-left: 5%;
-      }
-    span {
-      color: white;
-      font-size: 25px;
-      text-shadow: black 1px 1px 1px;
+      text-shadow: $darkTextShadow;
     }
 }
 
 #addInput {
-      position: relative;
-      width: 40px;
-      height: 30px;
-      border-radius: 10px;
-      background-color: white;
-      border: 2px red ridge;
-      color: red;
-      text-shadow: 1px 1px 1px skyblue;
-      letter-spacing: .25em;
-      margin: 10px;
+  @include sizing(30px, 40px);
+  background-color: $lightBG;
+  border-radius: 10px;
+  border: 2px $buttonAccent ridge;
+  color: $buttonAccent;
+  letter-spacing: .25em;
+  margin: 10px;
+  position: relative;
+  text-shadow: $lightButtonTxtShadow;
 
-      &:hover {
-        background-color: red;
-        border: 2px white ridge;
-        color: white;
-        cursor: pointer;
-      }
+  &:hover {
+    background-color: $backgroundNAccent;
+    border: $lightButtonBorder;
+    color: $lightFontColor;
+    cursor: pointer;
+  }
 }

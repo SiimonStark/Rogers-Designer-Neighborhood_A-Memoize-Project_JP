@@ -1,13 +1,12 @@
 .field-container {
-  @include fullSize();
+  @include sizing(100%, 100%);
   box-sizing: border-box;
   z-index: 2;
 
     p {
-      position: absolute;
-      left: 15%;
+      @include absPosition(null, 15%, null, null, null);
+      color: $lightFontColor;
       font-family: Radley;
-      color: white;
       font-size: 24px;
     }
 }
@@ -19,72 +18,59 @@
 // * -----Road-------- * //
 // ===================== //
 .road1--container {
-  align-content: flex-end;
-  display: flex;
-  height: 100%;
-  justify-content: flex-end;
-  left: 20px;
+  @include absPosition(0,null,null,20px,4);
+  @include displayFlex(flex-end, null, flex-end, null);
+  @include sizing(100%, 50%);
   padding: 15px 0px 15px 0px;
-  position: absolute;
-  top: 0;
-  width: 50%;
-  z-index: 4;
 }
 .road2--container {
+  @include absPosition(47%, null, null, 0, 4);
+  @include sizing(50%, 96%);
   display: flex;
-  height: 50%;
-  left: 0px;
   padding: 0 15px;
-  position: absolute;
-  top: 47%;
-  width: 96%;
-  z-index: 4;
 }
 .road1 {
+  @include sizing(95%, 50px);
   background: url('../Resources/town/road.png');
   background-repeat: repeat-y;
-  height: 95%;
-  width: 50px;
-  // z-index: 4;
 }
 .road2 {
   background: url('../Resources/town/road2.png');
   background-repeat: repeat-x;
   width: 100%;
-  // z-index: 4;
 }
 // * -----Trees-------- * //
 // ===================== //
 .tree--container {
-  @include fullSize();
-  // border: yellow 5px solid;
+  @include displayFlex(space-around, null, null, column);
+  @include sizing(100%, 100%);
+  padding-left:15px;
   z-index: 5;
 }
 .tree__finished--container {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
+  @include displayFlex(space-around, null, null, column);
 }
-%tree {
-  height: 50px;
-  width: 50px;
-  border: white dotted 3px;
-}
+
 .tree1 {
-  @extend %tree;
-  background: url('../Resources/town/tree-2.png');
-  background-repeat: no-repeat;
-  background-position: center;
+  @include itemProp(white, '../Resources/town/tree-2.png');
 }
 .tree2 {
-  @extend %tree;
-  background: url('../Resources/town/tree-3.png');
-  background-repeat: no-repeat;
-  background-position: center;
+  @include itemProp(white, '../Resources/town/tree-3.png');
 }
 .tree3 {
-  @extend %tree;
-  background: url('../Resources/town/tree-4.png');
-  background-repeat: no-repeat;
-  background-position: center;
+  @include itemProp(white, '../Resources/town/tree-4.png');
+}
+// * -----Houses------- * //
+// ===================== //
+.house--container {
+  @include absPosition(0,null,null,0,6);
+  @include displayFlex(center,center,null,null);
+  @include sizing(100%, 100%);
+}
+.house__finished--container {
+  @include displayFlex(center,center,null,null);
+}
+.house {
+  @include itemProp(yellow, '../Resources/town/house-1.png');
+  background-size: cover;
 }

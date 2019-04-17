@@ -1,4 +1,46 @@
-@mixin fullSize() {
-  height: 100%;
-  width: 100%;
+//=== Mixins ===//
+//==============//
+@mixin sizing($h, $w) {
+  height: $h;
+  width: $w;
 }
+
+@mixin displayFlex($jC, $aI, $aC, $fD) {
+  display: flex;
+  justify-content: $jC;
+  align-items: $aI;
+  align-content: $aC;
+  flex-direction: $fD
+}
+
+@mixin absPosition($t,$r,$b,$l,$z) {
+  position: absolute;
+  top: $t;
+  right: $r;
+  bottom: $b;
+  left: $l;
+  z-index: $z;
+}
+
+@mixin itemProp($col, $url) {
+  background: url($url);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: $col dotted 3px;
+  height: 50px;
+  width: 50px;
+}
+
+//== VARIABLE ==//
+//==============//
+$darkShadow: 2px 2px 5px black;
+$darkTextShadow: black 1px 1px 1px;
+$darkButtonTextShadow: .5px .5px 1px black;
+$lightFontColor: white;
+$lightComponentBG: skyblue;
+$lightComponentBorder: white 5px solid;
+$lightBG: white;
+$lightButtonTxtShadow:1px 1px 1px skyblue; 
+$lightButtonBorder: 2px white ridge;
+$buttonAccent: #d83a54;
+$backgroundNAccent: #d83a54;
