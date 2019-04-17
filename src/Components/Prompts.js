@@ -1,56 +1,100 @@
 import React, { Component } from 'react';
 
 class Prompts extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
-      prompts: {
-        0: {
+      prompts: [
+        {
           question: "# 1: Grid the field 2x2, for 4 total squares",
           answers: {
             display: "grid",
             gridTemplateAreas: `"square-1 square-2" "square-3 square-4"`
-          }
+          },
+          correctAns: false
         },
-        1: {
+        {
           question: "# 2: Align the Roads to the edge of the grid",
           answers: {
             display: "grid",
             gridTemplateAreas: `"square-1 square-2" "square-3 square-4"`
-          }
+          },
+          correctAns: false
         },
-        2: {
+        {
           question:
             "# 3: Give space around the trees & Align them to the left of each grid",
           answers: {
             display: "grid",
             gridTemplateAreas: `"square-1 square-2" "square-3 square-4"`
-          }
+          },
+          correctAns: false
         },
-        3: {
+        {
           question: "# 4: Center the house in the grid square",
           answers: {
             display: "grid",
             gridTemplateAreas: `"square-1 square-2" "square-3 square-4"`
-          }
+          },
+          correctAns: false
         },
-        z: {
-          question: "No more Prompts!!"
+        {
+          question: "No more Prompts!!",
+          answers: undefined,
+          correctAns: undefined
         }
-      },
-      currentPrompt: 0
+      ],
+      currentPrompt: 0,
+      showButton: true
     };
   }
   checkPrompt = () => {
-    if (this.state.currentPrompt < 3) {
-      let currentCounter = this.state.currentPrompt += 1;
-      console.log(currentCounter);
-      this.setState({currentPrompt: currentCounter})
-    } else {
-      this.setState({currentPrompt: 'z'})
+    let index = this.state.currentPrompt;
+
+    switch(index) {
+      case 0: this.compareGrid(index)
+        break;
+      case 1: this.compareFlex(index)
+        break;
+      case 2: this.compareFlex(index)
+        break;
+      case 3: this.compareFlex(index)
+        break;
+      case 4: 
+        alert('More Coming Soon')
+        this.setState({showButton: false})
+        break;
+      default: console.log('ERROR: Switch Statement');
     }
   }
+  compareGrid = (index) => {
+    let newPrompts = this.state.prompts;
+
+    if (this.props.playerInputs[0].gridInputs['gridField0']) {
+      newPrompts[index].correctAns = true;
+      this.setState({ prompts: newPrompts, currentPrompt: 1 })
+    }
+  }
+  compareFlex = (index) => {
+    let newPrompts = this.state.prompts;
+
+    if (this.props.playerInputs[1].flexInputs['flexField0']) {
+      newPrompts[index].correctAns = true;
+      index ++
+      this.setState({ prompts: newPrompts, currentPrompt: index })
+    }
+  }
+  updateCorrectPrompt = () => {
+    //! NEXT
+  }
   render() {
+    let button;
+    this.state.showButton
+      ? button = <button id="Prompt-check" onClick={this.checkPrompt}>
+            Check
+          </button>
+      : button = null;
+    
     return (
       <footer className="Prompts">
         <article>
@@ -59,9 +103,7 @@ class Prompts extends Component {
             {this.state.prompts[this.state.currentPrompt].question}
           </p>
         </article>
-        <button id="Prompt-check" onClick={this.checkPrompt}>
-          Check
-        </button>
+        {button}
       </footer>
     );
   }

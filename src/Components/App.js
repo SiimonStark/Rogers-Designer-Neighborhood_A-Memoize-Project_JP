@@ -12,7 +12,13 @@ class App extends Component {
       playerInputs: [
         {gridInputs: []},
         {flexInputs: []}
-      ]
+      ],
+      promptAnswers: {
+        1: false,
+        2: false,
+        3: false,
+        4: false
+      }
     }
   }
   updateInputs = (field, userInput) => {
@@ -22,14 +28,20 @@ class App extends Component {
     grid[field] = userInput;
     flex[field] = userInput;
 
-    console.log('grid', grid)
-    console.log('flex', flex)
     this.setState({
       playerInputs: [
         {gridInputs: grid},
         {flexInputs: flex}
       ]
     })
+  }
+  updatePromptAns = (prompt) => {
+    switch(prompt) {
+      case 1:
+      break;
+      default: console.log('invalid')
+    }
+
   }
 
   render() {
@@ -39,7 +51,8 @@ class App extends Component {
         <Header />
         <DisplayField updateInputs={this.updateInputs} />
         <PlayerCommands updateInputs={this.updateInputs} />
-        <Prompts updateInputs={this.updateInputs} />
+        <Prompts playerInputs={this.state.playerInputs}
+          updatePromptAns= {this.updatePromptAns} />
       </div>
     );
   }
