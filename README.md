@@ -26,13 +26,14 @@ Created by:
 NOT Finished. (Not Perfect)
 **_Check our issues page for what we would like to improve on-**
 
-## Tech/framework used
-<b>Built with:
-  - React
-  - JSX
-  - Javascript
-  - SCSS/SASS
-  - Tested w/ Jest & Enzyme</b>
+## Tools Used to Build Project
+[React](https://reactjs.org/)
+
+[Enzyme](https://airbnb.io/enzyme/) & [Jest](https://airbnb.io/enzyme/docs/guides/jest.html)
+
+[SASS/SCSS](https://sass-lang.com/guide)
+
+[VSCode](https://code.visualstudio.com/)
  
  ## Remaining Areas for Improvement
  - Being able to check answers against multiple input fields.
