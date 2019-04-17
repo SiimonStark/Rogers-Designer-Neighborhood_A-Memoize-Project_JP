@@ -19,9 +19,18 @@ class App extends Component {
   updateInputs = (field, userInput) => {
     let grid = this.state.playerInputs[0].gridInputs;
     let flex = this.state.playerInputs[1].flexInputs;
-    
-    grid[field] = userInput;
-    flex[field] = userInput;
+    console.log(field.includes('grid'));
+    console.log('flex',flex)
+    field.includes('grid')
+      ? grid.push(userInput)
+      : flex.push(userInput);
+    // field.includes('grid', () => {
+    //   grid.push(userInput);
+    // });
+    // field.includes('flex', () => {
+    //   flex.push(userInput);
+    // });
+    // flex[field] = userInput;
 
     this.setState({
       playerInputs: [
@@ -35,7 +44,7 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.playerInputs[0])
+    console.log(this.state.playerInputs)
     return (
       <div className="App">
         <Header />

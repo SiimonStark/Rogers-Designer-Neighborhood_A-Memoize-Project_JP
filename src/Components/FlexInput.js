@@ -18,7 +18,9 @@ class FlexInput extends Component {
       ? flexRule = value
       : flexValue = value
 
-    this.props.updateInputs(id, { flexRule, flexValue });
+    if (flexRule.length > 3 && flexValue.length > 3) {
+      this.props.updateInputs(id, { [flexRule]: flexValue });
+    }
     this.setState({[id]: {flexRule, flexValue}});
   }
   addInputField = () => {

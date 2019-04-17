@@ -18,7 +18,9 @@ class GridInput extends Component {
       ? gridRule = value
       : gridValue = value
   //? console.log('test:', {[gridRule]: gridValue})
-    this.props.updateInputs(id, { [gridRule]: gridValue });
+    if (gridRule.length > 3 && gridValue.length > 3) {
+      this.props.updateInputs(id, { [gridRule]: gridValue });
+    }
     this.setState({[id]: {gridRule, gridValue}});
   }
   addInputField = () => {
