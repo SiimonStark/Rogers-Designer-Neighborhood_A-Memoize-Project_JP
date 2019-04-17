@@ -1,5 +1,5 @@
-## Project title
-**Memoize: Mr.Roger's Designer Neighborhood**
+## Mr.Roger's Designer Neighborhood
+**A Memoize Project**
 ## Summary:
 - Similar to Flex-box Froggy & Grid Garden; this React webapp aims to teach aspiring developers how to use Grid and Flex CSS properties together in unisen.
 
