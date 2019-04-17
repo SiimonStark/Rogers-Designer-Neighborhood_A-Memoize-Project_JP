@@ -69,9 +69,10 @@ class Prompts extends Component {
   }
   compareGrid = (index) => {
     let newPrompts = this.state.prompts;
-
+    console.log('compare this array', this.props.playerInputs[0].gridInputs)
     if (this.props.playerInputs[0].gridInputs['gridField0']) {
       newPrompts[index].correctAns = true;
+console.log(newPrompts)
       this.setState({ prompts: newPrompts, currentPrompt: 1 }
         , this.updateCorrectPrompt())
     }
@@ -97,7 +98,7 @@ class Prompts extends Component {
     this.state.showButton
       ? button = 
         <button 
-          id="Prompt-check" 
+          id="Promptcheck" 
           onClick={this.checkPrompt}>
           Check
         </button>

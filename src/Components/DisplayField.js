@@ -30,7 +30,7 @@ class DisplayField extends Component {
         {this.state.gridContainer ? (
           <section className="field-container" style={fieldStyle}>
             {this.state.gridSquares.map((square, ind) => (
-              <div className={square}>
+              <div key={ind} className={square}>
                 <p>{'S: ' + [ind + 1]}</p>
                 <div className="road--container">
                   <div className="road positionRoad" />

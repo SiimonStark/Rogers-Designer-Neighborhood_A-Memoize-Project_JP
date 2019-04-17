@@ -35,10 +35,11 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state.playerInputs[0])
     return (
       <div className="App">
         <Header />
-        <DisplayField />
+        <DisplayField ans={this.state.promptAnswers} />
         <PlayerCommands updateInputs={this.updateInputs} />
         <Prompts playerInputs={this.state.playerInputs}
           updatePromptAns= {this.updatePromptAns} />
