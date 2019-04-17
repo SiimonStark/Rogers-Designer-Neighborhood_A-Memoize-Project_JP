@@ -39,13 +39,12 @@ NOT Finished. (Not Perfect)
  - Being able to check answers against multiple input fields.
  - Being able to test when properties have changed.
 
-## Credits:
- Turing truly is a great environment to start this journey into our tech careers! The ecosystem of other developers all struggling and learning together builds such a strong emphasis on helping others and yourself to achieve success!!!
-
-## Screenshots<hr>
+## Screenshots
 
 **Gameboard**<br>
 ![gameboard](https://user-images.githubusercontent.com/23123990/52432860-db256e80-2ac8-11e9-8c0e-0ca64e1494c4.png)
 
+## Credits:
+ Turing truly is a great environment to start this journey into our tech careers! The ecosystem of other developers all struggling and learning together builds such a strong emphasis on helping others and yourself to achieve success!!!
 
 © [Justin Pyktel](https://github.com/SiimonStark)
