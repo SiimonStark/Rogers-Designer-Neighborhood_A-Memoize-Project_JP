@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Prompts should match Snapshot 1`] = `
+<footer
+  className="Prompts"
+>
+  <article>
+    <h3>
+      Prompt Instructions:
+    </h3>
+    <p
+      className="question"
+    >
+      # 1: Grid the field 2x2, for 4 total squares
+    </p>
+  </article>
+  <button
+    id="Prompt-check"
+    onClick={[Function]}
+  >
+    Check
+  </button>
+</footer>
+`;
+
+exports[`Prompts should match conditional Snapshot 1`] = `
+<footer
+  className="Prompts"
+>
+  <article>
+    <h3>
+      Prompt Instructions:
+    </h3>
+    <p
+      className="question"
+    >
+      # 1: Grid the field 2x2, for 4 total squares
+    </p>
+  </article>
+  <button
+    id="Prompt-check"
+    onClick={[Function]}
+  >
+    Check
+  </button>
+</footer>
+`;

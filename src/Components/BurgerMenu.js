@@ -22,7 +22,7 @@ class BurgerMenu extends Component {
           <li onClick={this.displayAlert}>Skip Prompt</li>
           <li onClick={this.displayAlert}>Save Game</li>
           <li>
-            <a
+            <a className="docsGrid"
               href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid"
               target="blank"
             >
@@ -30,7 +30,7 @@ class BurgerMenu extends Component {
             </a>
           </li>
           <li>
-            <a
+            <a className="docsFlex"
               href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex"
               target="blank"
             >

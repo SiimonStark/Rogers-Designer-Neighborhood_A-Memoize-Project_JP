@@ -104,7 +104,7 @@ html {
       height: 100%;
       width: 90%;
       margin: auto;
-      overflow: scroll;
+      overflow-y: auto;
     }
     .Prompts {
       grid-area: Prompts;

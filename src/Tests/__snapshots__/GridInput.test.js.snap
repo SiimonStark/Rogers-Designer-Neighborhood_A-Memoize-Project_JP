@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Gridnput should addInput field onClick of "+" button 1`] = `
+<form
+  className="GridInput"
+>
+  <h4>
+    Grid-Input:
+  </h4>
+  <div
+    className="gridInput inputGroup0"
+  >
+    <input
+      className="gridRule"
+      id="gridField0"
+      onChange={[Function]}
+      placeholder="Rule"
+      type="text"
+    />
+    <span
+      className="colon"
+    >
+      :
+    </span>
+    <input
+      className="gridValue"
+      id="gridField0"
+      onChange={[Function]}
+      placeholder="Value"
+      type="text"
+    />
+  </div>
+  <div
+    className="gridInput inputGroup1"
+  >
+    <input
+      className="gridRule"
+      id="gridField1"
+      onChange={[Function]}
+      placeholder="Rule"
+      type="text"
+    />
+    <span
+      className="colon"
+    >
+      :
+    </span>
+    <input
+      className="gridValue"
+      id="gridField1"
+      onChange={[Function]}
+      placeholder="Value"
+      type="text"
+    />
+  </div>
+  <div
+    className="gridInput inputGroup2"
+  >
+    <input
+      className="gridRule"
+      id="gridField2"
+      onChange={[Function]}
+      placeholder="Rule"
+      type="text"
+    />
+    <span
+      className="colon"
+    >
+      :
+    </span>
+    <input
+      className="gridValue"
+      id="gridField2"
+      onChange={[Function]}
+      placeholder="Value"
+      type="text"
+    />
+  </div>
+  <input
+    id="addInput"
+    onClick={[Function]}
+    type="button"
+    value="+"
+  />
+</form>
+`;
+
+exports[`Gridnput should match snapshot 1`] = `
+<form
+  className="GridInput"
+>
+  <h4>
+    Grid-Input:
+  </h4>
+  <div
+    className="gridInput inputGroup0"
+  >
+    <input
+      className="gridRule"
+      id="gridField0"
+      onChange={[Function]}
+      placeholder="Rule"
+      type="text"
+    />
+    <span
+      className="colon"
+    >
+      :
+    </span>
+    <input
+      className="gridValue"
+      id="gridField0"
+      onChange={[Function]}
+      placeholder="Value"
+      type="text"
+    />
+  </div>
+  <input
+    id="addInput"
+    onClick={[Function]}
+    type="button"
+    value="+"
+  />
+</form>
+`;

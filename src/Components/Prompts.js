@@ -72,7 +72,8 @@ class Prompts extends Component {
 
     if (this.props.playerInputs[0].gridInputs['gridField0']) {
       newPrompts[index].correctAns = true;
-      this.setState({ prompts: newPrompts, currentPrompt: 1 })
+      this.setState({ prompts: newPrompts, currentPrompt: 1 }
+        , this.updateCorrectPrompt())
     }
   }
   compareFlex = (index) => {
@@ -81,18 +82,25 @@ class Prompts extends Component {
     if (this.props.playerInputs[1].flexInputs['flexField0']) {
       newPrompts[index].correctAns = true;
       index ++
-      this.setState({ prompts: newPrompts, currentPrompt: index })
+      this.setState(
+        { prompts: newPrompts, currentPrompt: index }
+        , this.updateCorrectPrompt()
+      );
     }
   }
   updateCorrectPrompt = () => {
-    //! NEXT
+    let promptsAns = this.state.prompts.map(prompt => prompt.correctAns);
+    this.props.updatePromptAns(promptsAns);
   }
   render() {
     let button;
     this.state.showButton
-      ? button = <button id="Prompt-check" onClick={this.checkPrompt}>
-            Check
-          </button>
+      ? button = 
+        <button 
+          id="Prompt-check" 
+          onClick={this.checkPrompt}>
+          Check
+        </button>
       : button = null;
     
     return (

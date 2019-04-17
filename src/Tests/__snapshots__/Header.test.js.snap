@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should match Snapshot 1`] = `
+<header>
+  <div
+    className="sky"
+  />
+  <div
+    className="logo"
+  />
+  <nav>
+    <button
+      onClick={[Function]}
+    >
+      MENU
+    </button>
+  </nav>
+</header>
+`;
+
+exports[`Header should match conditional render Snapshot 1`] = `
+<header>
+  <div
+    className="sky"
+  />
+  <div
+    className="logo"
+  />
+  <nav>
+    <button
+      onClick={[Function]}
+    >
+      MENU
+    </button>
+    <BurgerMenu
+      mouseLeave={[Function]}
+    />
+  </nav>
+</header>
+`;

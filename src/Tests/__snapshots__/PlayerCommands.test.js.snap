@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PlayerCommands should match snapshot 1`] = `
+<section
+  className="PlayerCommands"
+>
+  <GridInput
+    updateInputs={[MockFunction]}
+  />
+  <FlexInput
+    updateInputs={[MockFunction]}
+  />
+</section>
+`;

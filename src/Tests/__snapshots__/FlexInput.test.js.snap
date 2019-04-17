@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FlexInput should addInput field onClick of "+" button 1`] = `
+<form
+  className="FlexInput"
+>
+  <h4>
+    Flex-Input:
+  </h4>
+  <div
+    className="flexInput inputGroup0"
+  >
+    <input
+      className="flexRule"
+      id="flexField0"
+      onChange={[Function]}
+      placeholder="Rule"
+      type="text"
+    />
+    <span
+      className="colon"
+    >
+      :
+    </span>
+    <input
+      className="flexValue"
+      id="flexField0"
+      onChange={[Function]}
+      placeholder="Value"
+      type="text"
+    />
+  </div>
+  <div
+    className="flexInput inputGroup1"
+  >
+    <input
+      className="flexRule"
+      id="flexField1"
+      onChange={[Function]}
+      placeholder="Rule"
+      type="text"
+    />
+    <span
+      className="colon"
+    >
+      :
+    </span>
+    <input
+      className="flexValue"
+      id="flexField1"
+      onChange={[Function]}
+      placeholder="Value"
+      type="text"
+    />
+  </div>
+  <div
+    className="flexInput inputGroup2"
+  >
+    <input
+      className="flexRule"
+      id="flexField2"
+      onChange={[Function]}
+      placeholder="Rule"
+      type="text"
+    />
+    <span
+      className="colon"
+    >
+      :
+    </span>
+    <input
+      className="flexValue"
+      id="flexField2"
+      onChange={[Function]}
+      placeholder="Value"
+      type="text"
+    />
+  </div>
+  <input
+    id="addInput"
+    onClick={[Function]}
+    type="button"
+    value="+"
+  />
+</form>
+`;
+
+exports[`FlexInput should match snapshot 1`] = `
+<form
+  className="FlexInput"
+>
+  <h4>
+    Flex-Input:
+  </h4>
+  <div
+    className="flexInput inputGroup0"
+  >
+    <input
+      className="flexRule"
+      id="flexField0"
+      onChange={[Function]}
+      placeholder="Rule"
+      type="text"
+    />
+    <span
+      className="colon"
+    >
+      :
+    </span>
+    <input
+      className="flexValue"
+      id="flexField0"
+      onChange={[Function]}
+      placeholder="Value"
+      type="text"
+    />
+  </div>
+  <input
+    id="addInput"
+    onClick={[Function]}
+    type="button"
+    value="+"
+  />
+</form>
+`;

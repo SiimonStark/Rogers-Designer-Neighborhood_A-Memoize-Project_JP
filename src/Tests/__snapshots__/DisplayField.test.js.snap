@@ -1,0 +1,192 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DisplayField should match snapShot 1`] = `
+<main
+  className="DisplayField"
+>
+  <div
+    className="grass"
+  />
+  <div
+    className="road1--container"
+  >
+    <div
+      className="road1 positionRoad"
+    />
+  </div>
+  <div
+    className="road2--container"
+  >
+    <div
+      className="road2 positionRoad"
+    />
+  </div>
+  <section
+    className="field-container"
+    style={
+      Object {
+        "border": "1px solid red",
+        "display": "grid",
+        "gridTemplateAreas": "\\"square-1 square-2\\" \\"square-3 square-4\\"",
+      }
+    }
+  >
+    <div
+      className="fieldSquare square-1"
+      style={
+        Object {
+          "border": "2px solid yellow",
+        }
+      }
+    >
+      <p>
+        S: 1
+      </p>
+      <div
+        className="road--container"
+      >
+        <div
+          className="road positionRoad"
+        />
+      </div>
+      <div
+        className="tree--container"
+      >
+        <div
+          className="tree1 positionTree1"
+        />
+        <div
+          className="tree2 positionTree2"
+        />
+        <div
+          className="tree3 positionTree3"
+        />
+      </div>
+      <div
+        className="house--container"
+      >
+        <div
+          className="house positionHouse"
+        />
+      </div>
+    </div>
+    <div
+      className="fieldSquare square-2"
+      style={
+        Object {
+          "border": "2px solid yellow",
+        }
+      }
+    >
+      <p>
+        S: 2
+      </p>
+      <div
+        className="road--container"
+      >
+        <div
+          className="road positionRoad"
+        />
+      </div>
+      <div
+        className="tree--container"
+      >
+        <div
+          className="tree1 positionTree1"
+        />
+        <div
+          className="tree2 positionTree2"
+        />
+        <div
+          className="tree3 positionTree3"
+        />
+      </div>
+      <div
+        className="house--container"
+      >
+        <div
+          className="house positionHouse"
+        />
+      </div>
+    </div>
+    <div
+      className="fieldSquare square-3"
+      style={
+        Object {
+          "border": "2px solid yellow",
+        }
+      }
+    >
+      <p>
+        S: 3
+      </p>
+      <div
+        className="road--container"
+      >
+        <div
+          className="road positionRoad"
+        />
+      </div>
+      <div
+        className="tree--container"
+      >
+        <div
+          className="tree1 positionTree1"
+        />
+        <div
+          className="tree2 positionTree2"
+        />
+        <div
+          className="tree3 positionTree3"
+        />
+      </div>
+      <div
+        className="house--container"
+      >
+        <div
+          className="house positionHouse"
+        />
+      </div>
+    </div>
+    <div
+      className="fieldSquare square-4"
+      style={
+        Object {
+          "border": "2px solid yellow",
+        }
+      }
+    >
+      <p>
+        S: 4
+      </p>
+      <div
+        className="road--container"
+      >
+        <div
+          className="road positionRoad"
+        />
+      </div>
+      <div
+        className="tree--container"
+      >
+        <div
+          className="tree1 positionTree1"
+        />
+        <div
+          className="tree2 positionTree2"
+        />
+        <div
+          className="tree3 positionTree3"
+        />
+      </div>
+      <div
+        className="house--container"
+      >
+        <div
+          className="house positionHouse"
+        />
+      </div>
+    </div>
+  </section>
+</main>
+`;
