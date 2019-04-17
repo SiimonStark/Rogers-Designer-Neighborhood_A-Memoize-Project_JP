@@ -9,6 +9,7 @@ exports[`Gridnput should addInput field onClick of "+" button 1`] = `
   </h4>
   <div
     className="gridInput inputGroup0"
+    key="0"
   >
     <input
       className="gridRule"
@@ -32,6 +33,7 @@ exports[`Gridnput should addInput field onClick of "+" button 1`] = `
   </div>
   <div
     className="gridInput inputGroup1"
+    key="1"
   >
     <input
       className="gridRule"
@@ -55,6 +57,7 @@ exports[`Gridnput should addInput field onClick of "+" button 1`] = `
   </div>
   <div
     className="gridInput inputGroup2"
+    key="2"
   >
     <input
       className="gridRule"
@@ -94,6 +97,7 @@ exports[`Gridnput should match snapshot 1`] = `
   </h4>
   <div
     className="gridInput inputGroup0"
+    key="0"
   >
     <input
       className="gridRule"

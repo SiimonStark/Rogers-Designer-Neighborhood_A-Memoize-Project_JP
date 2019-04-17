@@ -17,8 +17,10 @@ class GridInput extends Component {
     className === 'gridRule'
       ? gridRule = value
       : gridValue = value
-
-    this.props.updateInputs(id, { gridRule, gridValue } );
+  //? console.log('test:', {[gridRule]: gridValue})
+    if (gridRule.length > 3 && gridValue.length > 3) {
+      this.props.updateInputs(id, { [gridRule]: gridValue });
+    }
     this.setState({[id]: {gridRule, gridValue}});
   }
   addInputField = () => {
@@ -38,7 +40,7 @@ class GridInput extends Component {
       <form className="GridInput">
         <h4>Grid-Input:</h4>
         {this.state.inputMapList.map((inputField, ind) => { return (
-          <div className={'gridInput inputGroup' + ind}>
+          <div key={ind} className={'gridInput inputGroup' + ind}>
             <input id={'gridField' + ind} onChange={this.handleGridChange}  className="gridRule" type="text" placeholder="Rule" />
             <span className="colon">:</span>
             <input id={'gridField' + ind} onChange={this.handleGridChange}  className="gridValue" type="text" placeholder="Value" />

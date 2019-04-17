@@ -76,30 +76,30 @@ describe('Prompts', () => {
     });
   });
 
-  it.skip('should onClick of the button invoke checkPrompts', () => {
-    let mockIndex = wrapper.state('currentPrompt');
+  it('should onClick of the button invoke checkPrompts for Grid', () => {
     mockPlayerInputs[0].gridInputs.push(
-        {gridField0:{gridRule: '', gridValue: ''}}
+      {gridField0:{gridRule: 'hello', gridValue: 'world'}}
       );
-    console.log('test', mockPlayerInputs);
-
-    wrapper.instance().checkPrompt();
-    wrapper.instance().compareGrid(mockIndex);
-    expect(wrapper.state()).toEqual({
-      prompts: [
-        {
-          question: "# 1: Grid the field 2x2, for 4 total squares",
-          answers: {
-            display: "grid",
-            gridTemplateAreas: `"square-1 square-2" "square-3 square-4"`
-          },
-          correctAns: true
-        }
-      ]
-    });
+    let wrapper = shallow(
+      <Prompts
+      playerInputs={mockPlayerInputs}
+      updatePromptAns={updatePromptAnsMock}
+      />
+    ).renderProp('render')();
+    let mockIndex = wrapper.state('currentPrompt');
+    console.log('new inputs', mockPlayerInputs);
+    console.log('currPrompt', wrapper.state('currentPrompt'))
+    
+    wrapper.find("#Promptcheck").simulate('click');
+    console.log(wrapper.state())
+    wrapper.instance().compareGrid(wrapper.state('currentPrompt'));
+    let updatedMockPrompts = mockPrompts;
+    updatedMockPrompts[0].correctAns = true;
+    // ? console.log('updated mockPrompts', updatedMockPrompts);
+    expect(wrapper.state('prompts')).toEqual(updatedMockPrompts);
   });
 
-  it.skip('should onClick of the button invoke checkPrompts', () => {
+  it.skip('should onClick of the button invoke checkPrompts for Flex', () => {
     wrapper.state({currentPrompt: 1})
     let mockIndex = wrapper.state('currentPrompt');
     mockPlayerInputs[1].flexInputs.push(

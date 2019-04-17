@@ -25,7 +25,6 @@ exports[`DisplayField should match snapShot 1`] = `
     className="field-container"
     style={
       Object {
-        "border": "1px solid red",
         "display": "grid",
         "gridTemplateAreas": "\\"square-1 square-2\\" \\"square-3 square-4\\"",
       }
@@ -33,11 +32,7 @@ exports[`DisplayField should match snapShot 1`] = `
   >
     <div
       className="fieldSquare square-1"
-      style={
-        Object {
-          "border": "2px solid yellow",
-        }
-      }
+      key="0"
     >
       <p>
         S: 1
@@ -72,11 +67,7 @@ exports[`DisplayField should match snapShot 1`] = `
     </div>
     <div
       className="fieldSquare square-2"
-      style={
-        Object {
-          "border": "2px solid yellow",
-        }
-      }
+      key="1"
     >
       <p>
         S: 2
@@ -111,11 +102,7 @@ exports[`DisplayField should match snapShot 1`] = `
     </div>
     <div
       className="fieldSquare square-3"
-      style={
-        Object {
-          "border": "2px solid yellow",
-        }
-      }
+      key="2"
     >
       <p>
         S: 3
@@ -150,11 +137,7 @@ exports[`DisplayField should match snapShot 1`] = `
     </div>
     <div
       className="fieldSquare square-4"
-      style={
-        Object {
-          "border": "2px solid yellow",
-        }
-      }
+      key="3"
     >
       <p>
         S: 4

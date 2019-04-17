@@ -9,6 +9,7 @@ exports[`FlexInput should addInput field onClick of "+" button 1`] = `
   </h4>
   <div
     className="flexInput inputGroup0"
+    key="0"
   >
     <input
       className="flexRule"
@@ -32,6 +33,7 @@ exports[`FlexInput should addInput field onClick of "+" button 1`] = `
   </div>
   <div
     className="flexInput inputGroup1"
+    key="1"
   >
     <input
       className="flexRule"
@@ -55,6 +57,7 @@ exports[`FlexInput should addInput field onClick of "+" button 1`] = `
   </div>
   <div
     className="flexInput inputGroup2"
+    key="2"
   >
     <input
       className="flexRule"
@@ -94,6 +97,7 @@ exports[`FlexInput should match snapshot 1`] = `
   </h4>
   <div
     className="flexInput inputGroup0"
+    key="0"
   >
     <input
       className="flexRule"
